@@ -1,0 +1,99 @@
+declare
+
+v_stmt varchar2(2000);
+v_wc   varchar2(2000);
+quote  varchar2(1):=chr(39);
+
+begin
+
+v_stmt:='
+
+SELECT FAC_ID,
+FAC_NAME,
+FAC_LEVEL,
+FAC_DIM_LENGTH,
+FAC_DIM_WIDTH,
+FAC_AREA_METER,
+FAC_AREA_FEET,
+FAC_CEILING_HEIGHT,
+FAC_WIFI,
+FAC_DIVISIBLE,
+THEATER,
+CLASSROOM,
+BANQUET_ROUND,
+BANQUET_RECTANGULAR,
+COCKTAILS,
+CONGRESS,
+EXHIBITIONS,
+BOARDROOM
+FROM VW_FACILITIES
+where fac_active = ''Y'' ';
+
+-- if :P6_X_VENUE_TYPE = 'TH' then
+-- v_wc := v_wc || ' AND THEATER >= :P6_X_VENUE_CAPACITY';
+-- end if;
+
+-- if :P6_X_VENUE_TYPE = 'CL' then
+-- v_wc := v_wc || ' AND CLASSROOM >= :P6_X_VENUE_CAPACITY';
+-- end if;
+
+-- if :P6_X_VENUE_TYPE = 'BR' then
+-- v_wc := v_wc || ' AND BANQUET_ROUND >= :P6_X_VENUE_CAPACITY';
+-- end if;
+
+-- if :P6_X_VENUE_TYPE = 'BA' then
+-- v_wc := v_wc || ' AND BANQUET_RECTANGULAR >= :P6_X_VENUE_CAPACITY';
+-- end if;
+
+-- if :P6_X_VENUE_TYPE = 'CK' then
+-- v_wc := v_wc || ' AND COCKTAILS >= :P6_X_VENUE_CAPACITY';
+-- end if;
+
+-- if :P6_X_VENUE_TYPE = 'CO' then
+-- v_wc := v_wc || ' AND CONGRESS >= :P6_X_VENUE_CAPACITY';
+-- end if;
+
+-- if :P6_X_VENUE_TYPE = 'EX' then
+-- v_wc := v_wc || ' AND EXHIBITIONS >= :P6_X_VENUE_CAPACITY';
+-- end if;
+
+-- if :P6_X_VENUE_TYPE = 'BO' then
+-- v_wc := v_wc || ' AND BOARDROOM >= :P6_X_VENUE_CAPACITY';
+-- end if;
+
+if :F_OL_LAYOUT = 'TH' then
+v_wc := v_wc || ' AND THEATER >= :F_OL_MAX_PERSON';
+end if;
+
+if :F_OL_LAYOUT = 'CL' then
+v_wc := v_wc || ' AND CLASSROOM >= :F_OL_MAX_PERSON';
+end if;
+
+if :F_OL_LAYOUT = 'BR' then
+v_wc := v_wc || ' AND BANQUET_ROUND >= :F_OL_MAX_PERSON';
+end if;
+
+if :F_OL_LAYOUT = 'BA' then
+v_wc := v_wc || ' AND BANQUET_RECTANGULAR >= :F_OL_MAX_PERSON';
+end if;
+
+if :F_OL_LAYOUT = 'CK' then
+v_wc := v_wc || ' AND COCKTAILS >= :F_OL_MAX_PERSON';
+end if;
+
+if :F_OL_LAYOUT = 'CO' then
+v_wc := v_wc || ' AND CONGRESS >= :F_OL_MAX_PERSON';
+end if;
+
+if :F_OL_LAYOUT = 'EX' then
+v_wc := v_wc || ' AND EXHIBITIONS >= :F_OL_MAX_PERSON';
+end if;
+
+if :F_OL_LAYOUT = 'BO' then
+v_wc := v_wc || ' AND BOARDROOM >= :F_OL_MAX_PERSON';
+end if;
+
+return v_stmt||' '||v_wc||' '|| 'order by fac_level,fac_id ';
+
+end;
+

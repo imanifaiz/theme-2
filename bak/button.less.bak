@@ -1,0 +1,306 @@
+/* =========== */
+/* = Buttons = */
+/* =========== */
+
+a.uButton,
+a.uButtonLarge,
+a.uButtonSmall,
+a.uButtonIR {
+    text-align: center;
+    span {
+        white-space: nowrap;
+    }
+}
+
+a.uButton {
+    display: inline-block;
+    font: bold 12px/22px Arial, sans-serif;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid #888;
+
+    .box-shadow(0 1px 0 rgba(0,0,0,.15));
+
+    background: mix(#EFEFEF,#BABABA);
+    
+    span {
+        display: block;
+        color: #333;
+        text-shadow: 0 1px 0 rgba(255,255,255,.75);
+        padding: 0 8px;
+        border-radius: 3px;
+
+        //#gradient > .vertical(@start-color: #EFEFEF; @end-color: #BABABA);
+        #gradient > .vertical(@start-color: lighten(@default-button-bg,3.6%); @end-color: @default-button-bg);
+        .box-shadow(0 1px 0 rgba(255,255,255,1) inset);
+    }
+    span:hover {
+
+        #gradient > .vertical(@start-color: #F8F8F8; @end-color: #D6D6D6);
+    }
+    span:active  {
+
+        .box-shadow('0 11px 5px rgba(0,0,0,.25) inset, 0 0 1px rgba(0,0,0,.25) inset');
+    }
+    &.uHotButton {
+        border: 1px solid #00316f;
+        background: #00316f;
+    }
+    &.uHotButton span {
+
+        //#gradient > .vertical(@start-color: #7eafeb; @end-color: #2d5b93);
+        #gradient > .vertical(@start-color: lighten(@hot-button-bg,3.6%); @end-color: @hot-button-bg);
+
+        color: #FFF;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.35);
+
+        .box-shadow(0 1px 0 rgba(255,255,255,.35) inset);
+
+        &:hover {
+
+            #gradient > .vertical(@start-color: #a6c9f4; @end-color: #4073b0);
+
+        }
+        &:active {
+
+            .box-shadow('0 11px 5px rgba(0,0,0,.25) inset, 0 0 1px rgba(0,0,0,.25) inset');
+        }
+    }
+}
+
+a.uButtonSmall {
+    display: inline-block;
+    font: bold 11px/18px Arial, sans-serif;
+    text-decoration: none;
+    border-radius: 2px;
+    border: 1px solid #888;
+
+    .box-shadow(0 1px 0 rgba(0,0,0,.15));
+
+    background: mix(#EFEFEF,#BABABA);
+    span {
+        display: block;
+        color: #333;
+        text-shadow: 0 1px 0 rgba(255,255,255,.75);
+        padding: 0 8px;
+        border-radius: 1px;
+
+        #gradient > .vertical(@start-color: #EFEFEF; @end-color: #BABABA);
+        .box-shadow(0 1px 0 rgba(255,255,255,1) inset);
+    }
+    span:hover {
+
+        #gradient > .vertical(@start-color: #F8F8F8; @end-color: #D6D6D6);
+    }
+    span:active  {
+
+        .box-shadow('0 11px 5px rgba(0,0,0,.25) inset, 0 0 1px rgba(0,0,0,.25) inset');
+    }
+    &.uHotButton {
+        border: 1px solid #00316f;
+        background: #00316f;
+    }
+    &.uHotButton span {
+
+        #gradient > .vertical(@start-color: #7eafeb; @end-color: #2d5b93);
+        color: #FFF;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.35);
+
+        .box-shadow(0 1px 0 rgba(255,255,255,.35) inset);
+
+        &:hover {
+
+            #gradient > .vertical(@start-color: #a6c9f4; @end-color: #4073b0);
+        }
+        &:active {
+
+            .box-shadow('0 9px 5px rgba(0,0,0,.25) inset, 0 0 1px rgba(0,0,0,.25) inset');
+        }
+    }
+}
+
+a.uButtonLarge {
+    display: inline-block;
+    font: bold 14px/36px Arial, sans-serif;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid #888;
+
+    .box-shadow(0 1px 0 rgba(0,0,0,.15));
+
+    background: mix(#EFEFEF,#BABABA);
+    span {
+        display: block;
+        color: #333;
+        text-shadow: 0 1px 0 rgba(255,255,255,.75);
+        padding: 0 16px;
+        border-radius: 3px;
+
+        #gradient > .vertical(@start-color: #EFEFEF; @end-color: #BABABA);
+        .box-shadow(0 1px 0 rgba(255,255,255,1) inset);
+    }
+    span:hover {
+
+        #gradient > .vertical(@start-color: #F8F8F8; @end-color: #D6D6D6);
+    }
+    span:active  {
+
+        .box-shadow('0 11px 5px rgba(0,0,0,.25) inset, 0 0 1px rgba(0,0,0,.25) inset');
+    }
+    &.uHotButton {
+        border: 1px solid #00316f;
+        background: #00316f;
+    }
+    &.uHotButton span {
+        height: 36px;
+
+        #gradient > .vertical(@start-color: #7eafeb; @end-color: #2d5b93);
+        color: #FFF;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.35);
+
+        .box-shadow(0 1px 0 rgba(255,255,255,.35) inset);
+
+        &:hover {
+
+            #gradient > .vertical(@start-color: #a6c9f4; @end-color: #4073b0);
+        }
+        &:active {
+
+            .box-shadow('0 15px 5px rgba(0,0,0,.25) inset, 0 0 1px rgba(0,0,0,.25) inset');
+        }
+    }
+}
+
+a.uButtonIR {
+    display: inline-block;
+    font: bold 11px/22px Arial, sans-serif;
+    padding: 0 8px;
+
+    #gradient > .vertical(@start-color: #7eafeb; @end-color: #DDD);
+
+    border-radius: 2px;
+    border: 1px solid #969696;
+    color: #444;
+    text-shadow: 0 1px 0 @white75;
+    text-decoration: none;
+
+    .box-shadow('0 1px 0 rgba(0,0,0,.10), 0 1px 0 @white75 inset');
+
+    &:hover {
+        
+        #gradient > .vertical(@start-color: #FFF; @end-color: #EEE);
+    }
+    &:active {
+
+        .box-shadow('0 1px 0 rgba(0,0,0,.10), 0 1px 2px @black50 inset');
+        #gradient > .vertical(@start-color: #DDD; @end-color: #CCC);
+    }
+}
+a.uButtonIR.uHotButton {
+    border: 1px solid #00316f;
+
+    #gradient > .vertical(@start-color: #7eafeb; @end-color: #2d5b93);
+
+    color: #FFF;
+
+    .box-shadow('0 1px 0 rgba(0,0,0,.10), 0 1px 0 @white50 inset');
+
+    text-shadow: 0 -1px 0 rgba(0,0,0,.35);
+    font-weight: bold;
+    &:hover {
+
+        #gradient > .vertical(@start-color: #a6c9f4; @end-color: #4073b0);
+    }
+    &:active {
+
+        .box-shadow('0 1px 0 rgba(0,0,0,.10), 0 1px 2px @black50 inset');
+        #gradient > .vertical(@start-color: #a6c9f4; @end-color: #4073b0);
+    }
+}
+
+a.simpleButton {
+    display: inline-block;
+    padding: 0 8px;
+    font: normal 11px/20px Arial,sans-serif;
+    color: #404040;
+    background-color: #F0F0F0;
+    border: 1px solid #BBB;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+
+    .transition('background-color, border, .1s');
+
+    &:hover {
+        background-color: #FFF;
+        border: 1px solid #AAA;
+    }
+    &.hot {
+        background-color: #5786C0;
+        color: #FFF;
+        border-color: #00316F;
+        &:hover {
+            background-color: #6A9AD5;
+        }
+    }
+}
+
+#apexir_DATA_PANEL > table .apexir_WORKSHEET_DATA td,
+#apexir_GROUP_BY > table .apexir_WORKSHEET_DATA td {
+    a.simpleButton {
+        color: #404040;
+        text-decoration: none;
+        &.hot {
+            color: #FFF;
+        }
+    }
+}
+
+
+.ie6, .ie7, .ie8, .ie9 {
+    a.uButton,
+    a.uButtonLarge,
+    a.uButtonSmall {
+        span {
+            background: url(../images/app_theme.png) 0 -300px repeat-x #b6b6b6;
+        }
+        &.uHotButton span {
+            background: url(../images/app_theme.png) 0 -350px repeat-x #1B5191;
+        }
+    }
+}
+.ie9 {
+    a.uButton,
+    a.uButtonLarge,
+    a.uButtonSmall {
+        span {
+            border-radius: 1px;
+        }
+        &.uHotButton span {
+            background: url(../images/app_theme.png) 0 -351px repeat-x #1B5191;
+        }
+    }
+}
+
+/* Inset Buttons */
+section.uRegion span.uButtonContainer,
+section.uButtonRegion {
+    a.uButton,
+    a.uButtonLarge,
+    a.uButtonSmall,
+    a.uButtonIR {
+
+        .box-shadow(0 1px 0 rgba(255,255,255,.95));
+    }
+}
+
+/* Buttons in White Region have a Shadow */
+section.uWhiteRegion span.uButtonContainer {
+    a.uButton,
+    a.uButtonLarge,
+    a.uButtonSmall,
+    a.uButtonIR {
+
+        .box-shadow(0 1px 0 rgba(0,0,0,.10));
+    }
+}

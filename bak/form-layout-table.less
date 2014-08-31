@@ -1,0 +1,273 @@
+/* ====================================== */
+/* = Form Layout Table (apex-generated) = */
+/* ====================================== */
+/* Override FCK Editor's Padding */
+span.cke_skin_kama {
+    padding: 0 !important;
+}
+div.formNoHighlight tr:hover td {
+    background: none !important;
+}
+div#apexir_CONTROL_PANEL_DROP {
+    td.fielddatabold {
+        vertical-align: top;
+    }
+}
+div#apexir_WORKSHEET_REGION table.formlayout {
+    table.ajax_shuttle td {
+        vertical-align: top;
+    }
+    td {
+        padding: 2px;
+        background: none transparent;
+
+        .transition(none);
+        border-radius: 0;
+        vertical-align: top;
+        label {
+            display: inline;
+            font: normal 12px/16px Arial, sans-serif;
+            padding: 0;
+        }
+        button {
+            margin-right: 4px;
+        }
+        input.text_field,
+        select.selectlist,
+        input.password,
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            display: inline-block;
+            vertical-align: top;
+            line-height: 16px;
+            padding: 3px;
+            border: 1px solid #E0E0E0;
+            border-radius: 2px;
+            color: #404040;
+            background-color: #FAFAFA;
+            max-width: 100%;
+            height: 24px;
+
+            .box-shadow(0 1px 2px rgba(0, 0, 0, 0.05) inset);
+
+            &:absolute {
+                background-color: #FFF;
+                border: 1px solid #666;
+            }
+        }
+    }
+    tr:hover td {
+        background: none transparent;
+    }
+    td.apex_finderbar_left {
+        padding: 8px;
+    }
+    td.apex_finderbar_left_bottom {
+        vertical-align: bottom;
+    }
+}
+
+table#uPageCols td#uLeftCol {
+    table.formlayout {
+        td {
+            padding: 0 0 8px 0;
+            label {
+                font: normal 11px/12px Arial, sans-serif;
+            }
+            input.text_field,
+            select.selectlist,
+            input.password,
+            input[type="text"],
+            input[type="password"],
+            textarea {
+                margin: 0;
+                width: 164px;
+            }
+        }
+        tr.rowHighlight > td {
+            background-color: transparent;
+        }
+    }
+    section.uRegion > div.uRegionContent {
+        padding: 8px;
+    }
+}
+
+/* Style APEX Generated Form Table when in a Region Template */
+table.formlayout {
+    border-spacing: 0 0;
+    border-collapse: collapse;
+    td:empty {
+        padding: 0;
+    }
+    td {
+        input.text_field,
+        select.selectlist,
+        input.password,
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            display: inline-block;
+            vertical-align: top;
+            line-height: 16px;
+            padding: 3px;
+            border: 1px solid #E0E0E0;
+            border-radius: 2px;
+            color: #404040;
+            background-color: #FAFAFA;
+            max-width: 100%;
+            height: 24px;
+
+            .box-shadow(0 1px 2px rgba(0, 0, 0, 0.05) inset);
+
+            .transition('border 0.1s, box-shadow 0.1s');
+        }
+        input:focus, textarea:focus {
+            background-color: #FFF;
+            outline: 0;
+            border-color: @primary;
+
+            // .box-shadow('inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 4px rgba(115, 158, 210, .25)');
+        }
+        input.apex_disabled {
+            .opacity(0.5);
+        }
+        input.error, input.error:focus {
+            border: 1px solid red !important;
+        }
+        input[type=hidden] {
+            display: none;
+        }
+        textarea.codeTextarea {
+            font: normal 11px/14px monospace;
+        }
+        select.selectlist {
+            /* Add extra margin to get cell height same as single text field*/
+            margin: 6px 0 7px 0;
+        }
+        span.display_only,
+        span.display_only a {
+            font: normal 12px/16px @fontFamily;
+            color: #333;
+        }
+        span.display_bold,
+        span.display_bold a {
+            font: bold 12px/16px @fontFamily;
+            color: #333;
+        }
+        fieldset label {
+            display: inline;
+        }
+        label {
+            display: inline-block;
+            padding: 3px 8px 3px 0;
+            font: normal 12px/16px @fontFamily;
+            color: #555;
+            span {
+                display: none;
+            }
+            a {
+                font: normal 12px/16px @fontFamily;
+                color: #555;
+                text-decoration: none;
+            }
+            a.uHelpLink {
+                color: #555;
+                &:hover {
+                    text-decoration: underline;
+                };
+            }
+            &.uRequired {
+                font-weight: bold;
+            }
+            &.uRequired a.uHelpLink {
+                font-weight: bold;
+            }
+            &.uRequired img.uAsterisk {
+                width: 7px;
+                height: 11px;
+                background: url(../images/app_theme.png) -60px -20px no-repeat;
+                vertical-align: top;
+            }
+        }
+        span.uLabelError {
+            display: block;
+            font: normal 11px/12px @fontFamily;
+            color: #EA0000;
+            margin-right: 8px;
+        }
+        span.uNoLabel {
+            display: none;
+        }
+    }
+    & > tbody > tr {
+        & > td {
+            /*border-radius: 4px;*/
+            background: none transparent;
+        }
+        & > td:only-child {
+            border-radius: 4px;
+        }
+        & > td:first-child {
+            border-radius: 4px 0 0 4px;
+        }
+        & > td:last-child {
+            border-radius: 0 4px 4px 0;
+        }
+/*      &:hover > td {
+            background-color: #F8F8F8;
+        }*/
+        &.rowHighlight > td {
+            background-color: #F0F0F0;
+        }
+    }
+    table.lov {
+        a {
+            margin: 0;
+        }
+    }
+    td.lov input.popup_lov {
+        border: 1px solid @dividerBorder;
+        padding: 4px;
+        font: normal 14px/16px @fontFamily;
+        border-radius: 2px 0 0 2px;
+
+        .box-shadow(0 1px 1px rgba(0,0,0,.15) inset);
+
+        background-color: #F8F8F8;
+
+        .opacity(0.75);
+
+        color: #333;
+    }
+    td img.uPopupLOVIcon {
+        display: block;
+        width: 30px;
+        height: 26px;
+        background: url(../images/app_theme.png) -110px -552px no-repeat;
+        margin: 0;
+        border: 0;
+    }
+    table.shuttle {
+        td {
+            vertical-align: top;
+        }
+    }
+    & > tbody > tr > td {
+        padding: 4px 8px;
+    }
+}
+
+/* Popup LOV key in tabular forms */
+table {
+    span.lov {
+        img.uPopupLOVIcon {
+            width: 20px;
+            height: 18px;
+            background: url(../images/app_theme.png) -115px -556px no-repeat;
+            margin: 0;
+            border: 1px solid #AAA;
+        }
+    }
+}

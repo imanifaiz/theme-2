@@ -1,0 +1,132 @@
+/* Set up Variable Colors */
+@windowBorder: #AAA;
+@dividerBorder: #888;
+
+@black90: rgba(0,0,0,.90);
+@black90hex: #141414;
+
+@white75: rgba(255,255,255,.75);
+@black75: rgba(0,0,0,.75);
+@black75hex: #404040;
+
+@white50: rgba(255,255,255,.50);
+@black50: rgba(0,0,0,.50);
+@black50hex: #7f7f7f;
+
+@white25: rgba(255,255,255,.25);
+@black25: rgba(0,0,0,.25);
+@black25hex: #bfbfbf;
+
+@black10: rgba(0,0,0,.10);
+@black10hex: #DFDFDF;
+
+@fontFamily: Arial, sans-serif;
+
+@frameBorderRadius: 6px;
+
+@buttonBorderRadius: 4px;
+@buttonBorder: #666;
+
+// Base Color
+//@primary: #AB1A25;
+@secondary: #EFE7BE;
+@tertiary: #D97925;
+@yellow: #EAC124;
+@blue: #3563EB;
+
+@primary: #2581D4;	/* Main Primary color */
+@primary-1: #72AEE5;
+@primary-2: #4996DB;
+@primary-3: #0A70CD;
+@primary-4: #064F90;
+
+@secondary: #FF321C;	/* Main Secondary color (1) */
+@secondary-1: #FF8376;
+@secondary-2: #FF5948;
+@secondary-3: #FF1800;
+@secondary-4: #DF1500;
+
+@tertiary: #19E145;	/* Main Secondary color (2) */
+@tertiary-1: #6DED89;
+@tertiary-2: #41E665;
+@tertiary-3: #00DC31;
+@tertiary-4: #00A825;
+
+@color-complement: #FFA11C;	/* Main Complement color */
+@color-complement-1: #FFC676;
+@color-complement-2: #FFB348;
+@color-complement-3: #FF9500;
+@color-complement-4: #DF8200;
+
+@gray-darker:            lighten(#000, 13.5%); // #222
+@gray-dark:              lighten(#000, 20%);   // #333
+@gray:                   lighten(#000, 35%); // #555
+@gray-light:             lighten(#000, 60%);   // #999
+@gray-lighter:           lighten(#000, 85%); // #eee
+
+// Page
+@page-top-margin: 8px;
+
+// Header
+@default-header-bg: @primary;
+
+// Nav Bar
+@default-navbar-bg: lighten(@default-header-bg,5%);
+@default-navbar-border-color: #e9e9e9;
+@default-navbar-link-hover-bg: @primary-1;
+@default-navbar-link-color: darken(@default-navbar-bg,80%); //rgba(255, 255, 255, 0.6); //rgba(0, 0, 0, 0.6);
+@default-navbar-link-hover-color: #fff;
+@default-navbar-link-active-bg: #F2F2F2;
+@default-navbar-link-active-color: #222;
+
+
+// Breadcrumb
+@default-breadcrumb-bg: transparent; //#F57723;
+@default-breadcrumb-link-color: #444; //#fff;
+@default-breadcrumb-link-hover-color: #222;
+@default-breadcrumb-text-color: @default-breadcrumb-link-hover-color;
+
+// Region Section
+@default-region-header-bg: @gray-lighter;
+@default-region-header-color: @gray-dark;
+@default-border-color: #d9d9d9;
+
+// Button
+@default-button-bg: #e0e0e0;
+@hot-button-bg: #2D5B93;
+
+// Icons
+//** Load fonts from this directory.
+@icon-font-path:          "../fonts/";
+//** File name for all font files.
+@icon-font-name:          "glyphicons-halflings-regular";
+//** Element ID within SVG icon file.
+@icon-font-svg-id:        "glyphicons_halflingsregular";
+
+// Reports
+@default-report-header-bg: #f0f0f0; //#e8e8e8; //transparent
+@default-report-header-color: @gray-dark; //#555
+@default-report-border-color: #d9d9d9;
+@default-padding: 12px;
+@default-report-alternate-row-bg: @default-report-header-bg;
+@default-report-alternate-row-color: @gray-dark;
+@default-report-td-hover-bg: #EFEFEF;
+
+// Components
+@padding-base-vertical:     12px;
+@padding-base-horizontal:   12px;
+
+@padding-large-vertical:    10px;
+@padding-large-horizontal:  16px;
+
+@padding-small-vertical:    5px;
+@padding-small-horizontal:  10px;
+
+// Nav Bar
+@default-navbar-bg: lighten(@default-header-bg,5%);
+@default-navbar-border-color: #e9e9e9;
+@default-navbar-link-hover-bg: @primary-1;
+@default-navbar-link-color: darken(@default-navbar-bg,80%); //rgba(255, 255, 255, 0.6); //rgba(0, 0, 0, 0.6);
+@default-navbar-link-hover-color: #fff;
+@default-navbar-link-active-bg: #F2F2F2;
+@default-navbar-link-active-color: #222;

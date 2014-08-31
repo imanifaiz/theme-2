@@ -1,0 +1,46 @@
+/* Footer */
+footer#uFooter {
+    clear: both;
+    position: relative;
+    margin: 8px 20px 0 20px;
+    div.uFooterContent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 8px 0;
+        font: normal 11px/16px Arial, sans-serif;
+        color: #555;
+        z-index: 2;
+        a {
+            color: #333;
+        }
+    }
+    span.uFooterVersion {
+        position: absolute;
+        right: 0;
+        padding: 8px 0;
+        font: normal 11px/16px Arial, sans-serif;
+        color: #555;
+        z-index: 2;
+    }
+    div.uFooterBG {
+        z-index: 1;
+        margin: 0 126px;
+        background: url(../images/app_theme.png) 0 -204px repeat-x;
+        height: 32px;
+        div.uLeft,
+        div.uRight {
+            width: 126px;
+            height: 32px;
+            position: absolute;
+        }
+        div.uLeft {
+            background: url(../images/app_theme.png) 0 -236px repeat-x;
+            left: 0;
+        }
+        div.uRight {
+            background: url(../images/app_theme.png) 0 -268px repeat-x;
+            right: 0;
+        }
+    }
+}

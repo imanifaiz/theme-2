@@ -1,0 +1,55 @@
+/* ===================================== */
+/* = target regions place in side bars = */
+/* ===================================== */
+aside {
+    section.uRegion {
+        div.uRegionHeading h1 {
+            font: bold 11px/24px Arial, sans-serif;
+        }
+        div.uRegionContent {
+            padding: 4px 8px;
+            ul.uVerticalSidebarList {
+                margin: -4px -8px !important;
+                li {
+                    a {
+                        padding: 6px 8px;
+                    }
+                    &:last-child a {
+                        border-radius: 0 0 3px 3px;
+                    }
+                }
+            }
+            div.uVerticalProgressList {
+                margin: -3px 0 -3px -7px;
+            }
+        }
+    }
+    section.uWhiteRegion,
+    section.uBorderlessRegion,
+    section.uBracketedRegion {
+        div.uRegionHeading {
+            background: none transparent;
+            h1 {
+                border-bottom: none;
+                font: bold 11px/12px Arial, sans-serif;
+                padding-top: 6px;
+            }
+        }
+    }
+}
+
+.ie7 aside {
+    section.uRegion {
+        div.uRegionHeading h1 {
+            line-height: 24px;
+        }
+    }
+    section.uWhiteRegion,
+    section.uBorderlessRegion,
+    section.uBracketedRegion {
+        div.uRegionHeading h1 {
+            line-height: 12px;
+            padding-top: 6px;
+        }
+    }
+}

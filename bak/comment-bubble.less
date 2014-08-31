@@ -1,0 +1,43 @@
+/* =================== */
+/* = Comment Bubbles = */
+/* =================== */
+ul.commentBubbles {
+    margin: 8px !important;
+    padding: 0;
+    list-style: none;
+    & > li {
+        margin-bottom: 8px;
+        & > div {
+            border-radius: 4px;
+            background-color: #FFF0CA;
+
+            .box-shadow(0 1px 0 rgba(255,255,255,.75) inset);
+
+            border: 1px solid #D4C190;
+            padding: 4px 8px;
+            em {
+                color: #767676;
+                font-weight: bold;
+                padding-right: 8px;
+            }
+        }
+        & > span {
+            background: url(../images/app_theme.png) 0 -1050px no-repeat;
+            display: block;
+            font: normal 11px/12px Arial, sans-serif;
+            padding: 4px 0 0 20px;
+            margin-top: -1px;
+            color: #444;
+        }
+        &.grayComment {
+            & > div {
+                background-color: #F0F0F0;
+                border: 1px solid #CCCCCC;
+            }
+            & > span {
+                background: url(../images/app_theme.png) 0 -1070px no-repeat;
+                color: #444;
+            }
+        }
+    }
+}

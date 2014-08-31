@@ -1,0 +1,98 @@
+/* ======================== */
+/* = Search Field Styling = */
+/* ======================== */
+.sCustomSearch {
+    margin: 0 auto;
+    padding: 20px 0 24px 0;
+    }
+    .sCustomSearch table {
+        margin: 0 auto;
+        }
+.sCustomSearch.left {
+    margin: 0;
+    padding: 0 0 8px 0;
+    }
+    .sCustomSearch.left table,
+    .sCustomSearch.left td {
+        border-collapse: collapse;
+        padding: 0;
+        margin: 0;
+        border-spacing: 0;
+        }
+
+.sCustomSearch table.formlayout {
+    padding: 0;
+    }
+.sCustomSearch table.formlayout td {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    }
+    .sCustomSearch table.formlayout td button {
+        margin-top: 0;
+        }
+.sCustomSearch table.formlayout br {
+    display: none;
+    }
+.sCustomSearch.large .sSearchField {
+    min-width: 300px;
+    }
+div.sCustomSearch table.formlayout input.sSearchFieldBig {
+    display: block;
+    font: normal 16px/16px Arial, sans-serif;
+    border: 1px solid $windowBorder;
+    border-radius: 3px;
+    padding: 8px 8px 8px 32px;
+
+    .box-shadow(0 1px 2px rgba(0,0,0,.15) inset);
+
+    color: #333;
+    margin: 0;
+    height: 16px;
+    background: url(../images/app_theme.png) no-repeat -168px -520px #FFF;
+
+    .transition('border 0.1s, box-shadow 0.1s');
+
+    &:focus{
+        background-color: #FFF;
+        outline: 0;
+        border-color: #5585BF;
+
+        .box-shadow('inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 4px rgba(115, 158, 210, .25)');
+    }
+}
+ul.sSearchResultsReport {
+    margin: 0 0 10px 0;
+    padding: 0;
+    list-style: none;
+    }
+    ul.sSearchResultsReport li {
+        display: block;
+        list-style: none;
+        padding: 0 0 10px 0;
+        margin: 0;
+        }
+        ul.sSearchResultsReport li span.title {
+            display: block;
+            }
+        ul.sSearchResultsReport li span.title a {
+            font: bold 16px/24px Arial, sans-serif;
+            color: #4B66A7;
+            text-decoration: underline;
+            clear: both;
+            }
+        ul.sSearchResultsReport li span.description {
+            font: normal 13px/16px Arial, sans-serif;
+            color: #333;
+            display: block;
+            }
+        ul.sSearchResultsReport li span.type {
+            font: normal 11px/16px Arial, sans-serif;
+            padding: 0 10px 0 0;
+            color: #666;
+            }
+            ul.sSearchResultsReport li span.last_modified {
+                font: normal 13px/16px Arial, sans-serif;
+                padding: 0 10px 0 0;
+                color: #666;
+                }

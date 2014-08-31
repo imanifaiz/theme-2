@@ -1,0 +1,116 @@
+/* ===================== */
+/* = Voting List Style = */
+/* ===================== */
+.ie7 {
+    ul.voteList {
+        display: block;
+        margin: 0 !important;
+        li {
+            height: 1%;
+        }
+    }
+}
+ul.voteList {
+    display: block;
+    margin: 0 !important;
+    li {
+        &:first-child {
+            border-top: none;
+        }
+
+        .transition(background-transition .1s);
+
+        &:hover {
+            background-color: #F8F8F8;
+        }
+        border-top: 1px solid #DDD;
+        position: relative;
+        span.voteCounter {
+            margin: 8px;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border: 1px solid #BBB;
+            border-radius: 4px;
+            height: 40px;
+            width: 74px;
+
+            #gradient > .vertical(@start-color: #F0F0F0; @end-color: #E0E0E0);
+            .box-shadow(0 1px 0 rgba(255,255,255,.85) inset);
+
+            & > span {
+                font: bold 22px/40px Arial, sans-serif;
+                display: block;
+                text-align: center;
+                width: 50px;
+                float: left;
+                overflow: hidden;
+                text-shadow: 0 2px 0 rgba(255,255,255,.5);
+                color: #606060;
+
+                .box-shadow('0 1px 0 rgba(255,255,255,.85) inset');
+                #gradient > .vertical(@start-color: #F8F8F8; @end-color: #F0F0F0);
+
+                border-radius: 3px 0 0 3px;
+            }
+            & > a {
+                display: block;
+                width: 24px;
+                height: 20x;
+                float: left;
+                img {
+                    border-left: 1px solid #DDD;
+                    display: block;
+                    width: 23px;
+                    height: 20px;
+                }
+                &.upVote img {
+                    background: url(../images/app_theme.png) 0 -1314px no-repeat;
+                }
+                &.upVote.active img,
+                &.upVote:hover img{
+                    background: url(../images/app_theme.png) -24px -1314px no-repeat;
+                }
+                &.downVote img {
+                    background: url(../images/app_theme.png) -48px -1314px no-repeat;
+                }
+                &.downVote.active img,
+                &.downVote:hover img {
+                    background: url(../images/app_theme.png) -72px -1314px no-repeat;
+                }
+            }
+        }
+        span.voteDesc {
+            display: block;
+            padding: 12px 90px 10px 94px;
+            h3 {
+                font: normal 12px/20px Arial, sans-serif;
+                margin: 0;
+                color: #404040;
+            }
+            small {
+                color: #606060;
+                display: block;
+                font: normal 11px/16px Arial, sans-serif;
+            }
+        }
+        a.commentsLink {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin: -10px 8px;
+            font: normal 11px/20px Arial, sans-serif;
+            padding: 0 8px;
+            border-radius: 8px;
+            border: 1px solid #BBB;
+            background-color: #F0F0F0;
+            text-decoration: none;
+            color: #404040;
+            &:hover {
+                background-color: #FFF;
+                border: 1px solid #AAA;
+            };
+        }
+    }
+}

@@ -1,0 +1,35 @@
+/* =================================== */
+/* = Custom LightBox (modal dialogs) = */
+/* =================================== */
+div#modalBackground {
+  display:none;
+  position:fixed;
+  _position:absolute; /* hack for internet explorer 6*/
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  border:0;
+  z-index:10000;
+  background-color:#000;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)" !important;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40) !important;
+  }
+section.modalOn {
+    display: block !important;
+  z-index: 10001;
+  position: fixed;
+  top:20%;
+  left:50%;
+  margin-left:-300px; /* half of the width */
+  width:600px;
+    border: 1px solid #666;
+/*  div.uRegionContent {
+      min-height: 200px;
+  }*/
+}
+section.uModalRegion {
+    display:  none;
+}

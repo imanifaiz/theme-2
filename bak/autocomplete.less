@@ -1,0 +1,36 @@
+/* ================= */
+/* = Auto Complete = */
+/* ================= */
+div.ac_results {
+    border: 1px solid #AAA;
+    border-top: none;
+    padding: 8px 0;
+    border-radius: 0 0 3px 3px;
+
+    .box-shadow(0 1px 1px rgba(0,0,0,.1));
+
+    ul li {
+        padding: 0 8px;
+        font: normal 12px/24px Arial, sans-serif;
+        color: #333;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &.ac_even {
+            background-color: #FFF;
+        }
+        &.ac_odd {
+            background-color: #F8F8F8;
+        }
+        &.ac_over {
+            background-color: #689AD8;
+            color: #FFF;
+        }
+        &:active {
+            background-color: #4F80BE;
+        }
+        strong {
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+/* Nav Tabs*/
+
+/* NO-CSS3 Version */
+.no-css3 header#uHeader nav,
+.no-css3 nav.uPageTabs {
+	ul {
+		border: 0px solid #AAA;
+	}
+}
+
+.ie7 {
+	header#uHeader nav,
+	nav.uPageTabs {
+		ul {
+			li {
+				display: block;
+				float: left;
+				a {
+					color: #333 !important;
+				}
+			}
+		}
+	}
+}
+
+header#uHeader nav {
+	position: relative;
+
+	.clearfix();
+    background: rgba(255, 255, 255, 0.95);
+    .box-shadow(0 -1px 0 rgba(0, 0, 0, 0.09)inset);
+
+	&  ul {
+		.clearfix();
+		list-style: none;
+		margin: 0 196px 0 0;
+		padding: 0;
+		white-space: nowrap;
+		overflow: hidden;
+		li {
+		    display: block;
+			float: left;
+
+			&:last-child a {
+			    border-right: 1px solid #e8e8e8;
+			}
+
+			a {
+				display: block;
+				color: @default-navbar-link-color;
+				text-align: center;
+				font-size: 14px;
+				line-height: 16px;
+				padding: @default-navbar-padding;
+				text-decoration: none;
+				border-left: 1px solid #e8e8e8;
+
+				.transition('background .1s');
+
+				&:hover, &:active {
+					color: @default-navbar-link-hover-color;
+					background-color: @default-navbar-link-hover-bg; //rgba(255,255,255,.5);
+				}
+			}
+			a.active {
+				font-weight: bold;
+/*				@include border-radius(3px 3px 0 0);*/
+/*				@include background-gradient(#E6F1FF,#FFF);*/
+				background: none @default-navbar-link-active-bg;
+
+				//.box-shadow(0 1px 0 rgba(255,255,255,.75) inset);
+				color: @default-navbar-link-active-color;
+				color: rgba(0,0,0,.75);
+/*				padding-top: 3px;
+				margin-top: -4px;
+				border: 1px solid #466ea3;*/
+				border-bottom: none;
+/*				margin-left: -1px;
+				margin-right: -1px;*/
+				//&:hover, &:active {
+
+				//	#gradient > .vertical(@start-color: #E6F1FF; @end-color: #FFF);
+				//}
+			}
+		}
+	}
+}
+nav.uPageTabs {
+	margin: 0 0 8px 0;
+}
+
+div.uParentTabs {
+	position: relative;
+	ul {
+		position: absolute;
+		top: 8px;
+		right: 16px;
+		list-style: none;
+		margin: 0;
+		z-index: 10000;
+		li {
+			float: left;
+			a {
+				display: block;
+				font: normal 11px/18px inherit;
+				color: #333;
+				padding: 0 8px;
+				margin: 0 0 0 1px;
+				border: 1px solid #697E9B;
+				border-radius: 4px;
+				background-color: #91B5E1;
+
+				.transition('background-color border, .2s');
+
+				text-decoration: none;
+				&:hover {
+					background-color: #FFF;
+				}
+				&.active {
+					background-color: #FFF;
+				}
+			}
+		}
+	}
+}

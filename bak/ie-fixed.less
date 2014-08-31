@@ -1,0 +1,114 @@
+/* =========================== */
+/* = Internet Explorer Fixes = */
+/* =========================== */
+.ie7, .ie8 {
+    /* IE 7 and 8 fixes for transparency issues*/
+    header#uHeader nav ul li a, nav u.PageTabs ul li a {
+        background-color: #98b9e3;
+    }
+    header#uHeader nav ul li a:hover, nav u.PageTabs ul li a:hover {
+        background-color: #d8e4f4;
+    }
+    header#uHeader nav ul li a.active, nav u.PageTabs ul li a.active {
+        background-color: #ffffff;
+    }
+    header#uHeader nav ul li a.active:hover, nav u.PageTabs ul li a.active:hover {
+        background-color: #ffffff;
+    }
+}
+.ie7 {
+    /* Make Image Resizing smoother in IE7 */
+    img { -ms-interpolation-mode: bicubic; }
+
+    .calDragDrop {
+        width: auto !important;
+    }
+
+    /* IE7 Fixes as there is no support for display:table */
+    section.uRegion {
+        & > div.uRegionHeading h1 {
+            float: left;
+            border-bottom: none;
+            line-height: 38px;
+        }
+        &.uBorderlessRegion > div.uRegionHeading h1 {
+            float: left;
+            border-bottom: none;
+            line-height: 14px;
+        }
+        section.uRegion {
+            /* Nested Regions for IE7*/
+            div.uRegionHeading h1 {
+                line-height: 20px;
+            }
+        }
+        span.uButtonContainer {
+            float: right;
+        }
+        &.uHideShowRegion {
+            & > div.uRegionHeading > h1 {
+                line-height: 30px !important;
+            }
+        }
+    }
+    section.uWhiteRegion {
+        div.uRegionHeading h1 {
+            line-height: 24px;
+        }
+    }
+    table#uPageCols {
+        table-layout: fixed;
+    }
+    button#apexir_ACTIONSMENUROOT {
+        padding: 0 4px;
+        span {
+            background-position: 100% -583px;
+            line-height: 20px;
+        }
+    }
+    button.apexir-go-button span {
+        line-height: 20px;
+    }
+    div.apexir_ACTION_MENU ul.dhtmlSubMenu {
+        li {
+            height: 20px;
+            overflow: hidden;
+        }
+        li a {
+            display: inline-block !important;
+        }
+    }
+    /* DHTML Menu with Sublist Image Positioning*/
+    .dhtmlMenuLG2 li.dhtmlMenuItem1 img{display: block; margin: 6px;}
+    div.uReportFilterRow table.formlayout td {
+        vertical-align: middle !important;
+    }
+}
+.no-css3, .ie9 {
+    section.uButtonRegion {
+        background: url(../images/app_theme.png) 0 -968px repeat-x #DDDDDD;
+    }
+}
+.ie7, .ie8, .ie9 {
+    div.uFixedHeadersContainer {
+        position: relative;
+        height: 200px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    table.uReportFixedHeaders {
+        thead {
+            height: auto;
+            tr {
+                position: absolute;
+                //top: expression(this.offsetParent.scrollTop);
+            }
+        }
+        tbody {
+            height: auto;
+            tr:first-child td {
+                padding-top: 30px;
+            };
+        }
+    }
+}

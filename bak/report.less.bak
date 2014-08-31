@@ -1,0 +1,211 @@
+/* ===================== */
+/* =  Report Templates = */
+/* ===================== */
+.t-Report {
+display: block;
+overflow: auto;
+}
+.t-Report-wrap {
+float: left;
+}
+
+table.uReportContainer { width: 100%; }
+
+table.uReport {
+    empty-cells: show;
+    border-collapse: collapse;
+    border-spacing: 0 0;
+    border: 1px solid @default-report-border-color;
+
+    & thead > tr > th {
+        vertical-align: bottom;
+        background-color: @default-report-header-bg;
+        border: none;
+        border-bottom: 1px solid @default-report-border-color;
+        padding: @default-padding;
+        color: @default-report-header-color;
+
+        & a {
+            color: @default-report-header-color;
+        }
+    }
+
+    & > tbody > tr > td {
+        border: none;
+        border-bottom: 1px solid @default-report-border-color;
+        padding: @default-padding;
+    }
+
+    & > tbody > tr:last-child > td {
+        border-bottom: none;
+    }
+
+    & > tbody > tr:nth-child(2n) > td {
+        background-color: @default-report-alternate-td-bg;
+    }
+
+    & > tbody > tr:hover > td {
+        background-color: @default-report-td-hover-bg;
+    }
+}
+
+.uNoPadding table.uReport { border: none; }
+
+table.uReportStandard {}
+
+table.uReportAlternative {
+    border-color: @primary-3;
+
+    thead > tr > th {
+        background-color: @primary-2;
+        border-color: @primary-3;
+        color: #fff;
+    }
+
+    & > tbody > tr > td {
+        border-bottom: 1px solid @primary-3;
+    }
+}
+
+table.uReportHorizontal {
+    border: none;
+
+    thead > tr > th {
+        border-bottom: 2px solid @default-report-border-color;
+        background-color: @default-report-header-bg;
+    }
+
+    & > tbody > tr:last-child > td {
+        border-bottom: 1px solid @default-report-border-color;
+    }
+}
+
+table.uReportBorderless {
+    border: none;
+
+    thead > tr > th {
+        border-bottom: 2px solid @default-report-border-color;
+        background-color: @default-report-header-bg;
+    }
+
+    & > tbody > tr > td {
+        border-bottom: none;
+    }
+}
+
+table.uReportFixedHeaders {
+    border: none;
+    border-bottom: 1px solid #AAA;
+    thead > tr > th {
+        border-bottom: 1px solid #AAA;
+        padding: 8px;
+
+        #gradient > .vertical(@start-color: lighten(@default-report-header-bg,3.6%); @end-color: @default-report-header-bg);
+
+        // text-shadow: 0 1px 0 rgba(255,255,255,.75);
+    }
+    & > thead {
+        display: block;
+        th {
+            border-bottom: 1px solid #AAA;
+        }
+    }
+    & > tbody {
+        display: block;
+        height: 200px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        width: 100%;
+    }
+    & > tbody > tr {
+        display: block;
+        height: 28px;
+    }
+    & > tbody > tr > td {
+        padding: 4px 8px;
+        border-top: 1px solid #DDD;
+        border-bottom: none;
+        line-height: 20px;
+    }
+}
+
+
+/* Report Download Links */
+div.uReportDownloadLinks {
+    font: normal 11px/20px Arial, sans-serif;
+    color: #AAA;
+}
+
+/* Report Pagination */
+table td.pagination a.pagination {
+    display: block;
+    float: left;
+    font: normal 11px/20px Arial, sans-serif;
+    color: #888;
+    }
+    table table td.pagination a.pagination img {
+        vertical-align: bottom;
+        margin: 0 6px;
+        }
+a.uPaginationPrev, a.uPaginationNext {
+    display: block;
+    font: normal 11px/20px Arial, sans-serif;
+    text-decoration: none !important;
+
+    .transition('color, .1s');
+
+    }
+    a.uPaginationPrev:hover, a.uPaginationNext:hover {
+        color: #000;
+        }
+a.uPaginationNext {
+    font-weight: bold;
+    margin-left: 8px;
+    img {
+        width: 9px;
+        height: 12px;
+        background: url(../images/app_theme.png) -51px -20px no-repeat;
+        vertical-align: text-top;
+    }
+}
+a.uPaginationPrev {
+    margin-right: 8px;
+    img {
+        width: 9px;
+        height: 12px;
+        background: url(../images/app_theme.png) -48px -32px no-repeat;
+        vertical-align: text-top;
+    }
+}
+table td.pagination span.fielddata {
+    font: normal 11px/20px Arial, sans-serif;
+    color: #666;
+    }
+
+/* Value Attribute Pairs Tables */
+ul.uValuePairs {
+    list-style: none;
+    li {
+        display: block;
+        position: relative;
+        border-top: 1px dotted #DDD;
+        &:first-child {
+            border-top: none;
+        }
+        span {
+            display: block;
+            font: normal 12px/16px Arial, sans-serif;
+            padding: 4px 0;
+            &.uValueHeading {
+                /*float: left;*/
+                width: 80%;
+            }
+            &.uValue {
+                font-weight: bold;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+}

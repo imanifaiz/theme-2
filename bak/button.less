@@ -1,0 +1,173 @@
+/* ==========================================================================
+   Buttons
+   - Default
+   - Hot
+   - Red
+   - Green
+   - Yellow
+   ========================================================================== */
+
+.m-btn {
+	-webkit-appearance: none;
+	border: none;
+	border-radius: 2px;
+	.box-shadow(0 0 0 1px rgba(0, 0, 0, 	.125) inset);
+	color: #505050;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 16px;
+	margin: 0;
+	padding: 8px 12px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	.transition(all .3s ease-in-out);
+	user-select: none;
+	-ms-user-select: none;
+	-mz-user-select: none;
+	-webkit-user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+
+	&:hover, &:active, &:focus {
+		 .box-shadow('0 11px 5px rgba(0,0,0,.25) inset, 0 0 1px rgba(0,0,0,.25) inset');
+	}
+}
+
+.m-btn--default {
+	background-color: #F9F9F9;
+
+	&:hover, &:active, &:focus {
+		background-color: #e8e8e8;
+	}
+}
+
+.m-btn--hot {
+	background-color: @primary;
+	color: #fff;
+	.box-shadow(none);
+
+	&:hover, &:active, &:focus {
+		background-color: @primary-1;
+	}
+}
+
+.m-btn--red {
+	background-color: @secondary;
+	color: #fff;
+	.box-shadow(none);
+
+	&:hover, &:active, &:focus {
+		background-color: @secondary-1;
+	}
+}
+.m-btn--green {
+	background-color: @tertiary;
+	color: #fff;
+	.box-shadow(none);
+
+	&:hover, &:active, &:focus {
+		background-color: @tertiary-1;
+	}
+}
+.m-btn--yellow {
+	background-color: @color-complement;
+	color: #fff;
+	.box-shadow(none);
+
+	&:hover, &:active, &:focus {
+		background-color: @color-complement-1;
+	}
+}
+
+.m-btn--small {
+	font-size: 11px;
+	padding: 5px 12px;
+}
+.m-btn--large {
+	font: bold 14px/36px Arial, sans-serif;
+	border-radius: 3px;
+	padding: 0 16px;
+}
+
+.m-btn--IR {
+	border: 1px solid @primary;
+	.box-shadow(none);
+	color: @primary;
+	font-size: 10px;
+	padding: 2px 6px;
+
+	&:hover, &:active, &:focus {
+		background-color: @primary;
+		.box-shadow(none);
+		color: #fff;
+	}
+
+	.m-btn--IR-hot {
+		border: 2px solid @secondary;
+		color: @secondary;
+
+		&:hover, &:active, &:focus {
+			background-color: @secondary;
+			color: #fff;
+		}
+	}
+}
+
+.m-btn--noLabel {}
+.m-btn--icon {}
+.m-btn--iconOnly {}
+
+
+
+
+
+// .ie6, .ie7, .ie8, .ie9 {
+//     a.uButton,
+//     a.uButtonLarge,
+//     a.uButtonSmall {
+//         span {
+//             background: url(../images/app_theme.png) 0 -300px repeat-x #b6b6b6;
+//         }
+//         &.uHotButton span {
+//             background: url(../images/app_theme.png) 0 -350px repeat-x #1B5191;
+//         }
+//     }
+// }
+// .ie9 {
+//     a.uButton,
+//     a.uButtonLarge,
+//     a.uButtonSmall {
+//         span {
+//             border-radius: 1px;
+//         }
+//         &.uHotButton span {
+//             background: url(../images/app_theme.png) 0 -351px repeat-x #1B5191;
+//         }
+//     }
+// }
+
+/* Inset Buttons */
+// section.uRegion span.uButtonContainer,
+// section.uButtonRegion {
+//     a.uButton,
+//     a.uButtonLarge,
+//     a.uButtonSmall,
+//     a.uButtonIR {
+
+//         .box-shadow(0 1px 0 rgba(255,255,255,.95));
+//     }
+// }
+
+/* Buttons in White Region have a Shadow */
+// section.uWhiteRegion span.uButtonContainer {
+//     a.uButton,
+//     a.uButtonLarge,
+//     a.uButtonSmall,
+//     a.uButtonIR {
+
+//         .box-shadow(0 1px 0 rgba(0,0,0,.10));
+//     }
+// }

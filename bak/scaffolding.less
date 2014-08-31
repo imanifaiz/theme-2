@@ -1,0 +1,80 @@
+/* ====================== */
+/* = Scaffolding = */
+/* ====================== */
+
+// Reset the box-sizing
+//
+// Heads up! This reset may cause conflicts with some third-party widgets.
+// For recommendations on resolving such conflicts, see
+// http://getbootstrap.com/getting-started/#third-box-sizing
+* {
+  .box-sizing(border-box);
+}
+*:before,
+*:after {
+  .box-sizing(border-box);
+}
+
+body {
+    /*background: url(../images/bg_noise.png) #ffffff;*/
+    background-color: #F2F2F2;
+    font: normal 12px/16px 'Helvetica Neue','Segoe UI',Helvetica,Arial,sans-serif;
+    &#uPopup {
+        margin: 8px 0 0 0;
+    }
+}
+/* Error Page */
+div.uErrorTechInfo {
+    font: normal 11px/16px monospace;
+    color: #666;
+}
+
+/* Hidden Items (Region Position 8)*/
+div#uHiddenItems {
+    display: none;
+}
+/* ================ */
+/* = Page Columns = */
+/* ================ */
+div#uBodyContainer {
+    margin: 0;
+}
+#uOneCol {
+    clear: both;
+    margin: @page-top-margin 20px 0;
+    min-height: 500px;
+}
+#uTwoColumns,
+#uThreeColumns {
+    clear: both;
+    margin: @page-top-margin 20px 0;
+    min-height: 500px;
+}
+table#uPageCols {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    td#uLeftCol,
+    td#uRightCol,
+    td#uMidCol {
+        vertical-align: top;
+    }
+    td#uLeftCol {
+        padding-right: 8px;
+    }
+    td#uRightCol {
+        padding-left: 8px;
+    }
+    td#uLeftCol,
+    td#uRightCol {
+        width: 190px;
+        & > aside {
+            width: 190px;
+        }
+    }
+}
+
+table.multiCols {width: 100%}
+table.multiCols td + td {
+    padding-left: @default-padding;
+}

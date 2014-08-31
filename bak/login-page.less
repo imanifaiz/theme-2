@@ -1,0 +1,218 @@
+/* ================ */
+/* = Login Page = */
+/* ================ */
+body#uLogin {
+    background: url(../images/bg_noise.png) 0 0 repeat;
+    div#uBodyContainer {
+
+    }
+}
+.ie6, .ie7, .ie8, .ie9 {
+    div#uLoginContainer {
+        section.uRegion div.uRegionContent table.formlayout {
+            a.uButton span {
+                background: url(../images/app_theme.png) 0 -350px repeat-x #1B5191;
+            }
+        }
+    }
+}
+div#uLoginContainer {
+    width:480px;
+    height:360px;
+    position:absolute;
+    left:50%;
+    top:40%;
+    margin:-144px 0 0 -240px;
+    section.uRegion div.uRegionHeading h1 {
+        font: bold 24px/64px Arial, sans-serif;
+        color: #404040;
+        text-shadow: 0 1px 0 rgba(255,255,255,.75);
+        padding-left: 12px;
+    }
+    section.uRegion div.uRegionContent table.formlayout {
+        margin: 0;
+        td {
+            padding: 4px;
+            vertical-align: middle;
+            input {
+                display: block;
+                width: 220px;
+                height: 22px;
+                padding: 8px;
+                font-size: 22px;
+                line-height: 22px;
+                color: #666;
+                border: 1px solid #ccc;
+                margin-bottom: 0;
+            }
+            input[type="hidden"] {
+                display: none;
+            }
+            input {
+
+                .transition('border 0.1s, box-shadow 0.1s');
+                .box-shadow(inset 0 1px 3px rgba(0, 0, 0, 0.1));
+            }
+            input:focus {
+              background-color: #FFF;
+              outline: 0;
+              border-color: #5585BF;
+
+              .box-shadow('inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(115, 158, 210, .25)');
+            }
+            a.uButton {
+                display: block;
+                float: left;
+            }
+            label.uOptional {
+                display: block;
+                padding: 0;
+                font: normal 13px/40px Arial, sans-serif;
+                color: #666;
+                margin-right: 8px;
+            }
+            a.uButton {
+                display: inline-block;
+                font: bold 14px/36px Arial, sans-serif;
+                text-decoration: none;
+                border-radius: 3px;
+
+                .box-shadow(0 1px 0 rgba(0,0,0,.15));
+
+                border: 1px solid #00316f;
+                background: #00316f;
+                span {
+                    display: block;
+                    color: #FFF;
+                    height: 36px;
+                    text-shadow: 0 -1px 0 rgba(0,0,0,.35);
+                    padding: 0 16px;
+                    border-radius: 3px;
+
+                    #gradient > .vertical(@start-color: #7eafeb; @end-color: #2d5b93);
+                    .box-shadow(0 1px 0 rgba(255,255,255,.35) inset);
+                }
+                span:hover {
+
+                    #gradient > .vertical(@start-color: #a6c9f4; @end-color: #4073b0);
+                }
+                span:active  {
+                    .box-shadow('0 15px 5px rgba(0,0,0,.25) inset, 0 0 1px rgba(0,0,0,.25) inset');
+                }
+            }
+        }
+    }
+    div.uLoginBody table.formlayout {
+        margin: 0;
+        width: 100%;
+        td {
+            padding: 0;
+            vertical-align: top;
+            input {
+                display: block;
+                width: 426px;
+                height: 22px;
+                padding: 8px;
+                font-size: 22px;
+                line-height: 22px;
+                color: #666;
+                border: 1px solid #ccc;
+                margin-bottom: 16px;
+            }
+            input[type="hidden"] {
+                display: none;
+            }
+            input {
+
+                .transition('border 0.1s, box-shadow 0.1s');
+                .box-shadow(inset 0 1px 3px rgba(0, 0, 0, 0.1));
+            }
+            input:focus {
+              background-color: #FFF;
+              outline: 0;
+              border-color: #5585BF;
+
+              .box-shadow('inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(115, 158, 210, .25)');
+            }
+            a.uButton {
+                display: block;
+                float: left;
+            }
+            label.uOptional {
+                padding: 0;
+                font: normal 13px/24px Arial, sans-serif;
+                color: #666;
+            }
+        }
+    }
+}
+
+.ie7 {
+    section.uRegion.uLoginRegion {
+        div.uLoginHeading {
+            div.appIcon {
+                padding: 16px;
+                img {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+section.uRegion.uLoginRegion {
+    width: 478px;
+    margin: 0 auto;
+    min-height: 358px;
+
+    .box-shadow(0 1px 8px rgba(0,0,0,.15));
+
+    div.uLoginHeading {
+
+        .box-shadow(0 1px 0 rgba(255,255,255,.75) inset);
+
+        background-color: #E8E8E8;
+        border-radius: 3px 3px 0 0;
+        padding: 16px;
+        border-bottom: 1px solid #BBB;
+        position: relative;
+        h1 {
+            margin-left: 80px;
+            font: bold 24px/64px Arial, sans-serif;
+            color: #404040;
+            text-shadow: 0 1px 0 rgba(255,255,255,.75);
+        }
+        span.bgArrow {
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            left: 37px;
+            width: 22px;
+            height: 11px;
+            background: url(../images/app_theme.png) -88px -25px no-repeat;
+        }
+        div.appIcon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            img {
+                margin: 16px;
+            }
+        }
+    }
+    div.uLoginBody {
+        padding: 16px;
+        span.uButtonContainer {
+            border-top: 1px dotted #F0F0F0;
+            padding-top: 16px;
+            display: block;
+            text-align: right;
+            a.uButtonLarge {
+                width: 200px;
+                font: bold 22px/48px Arial, sans-serif;
+                span {
+                    height: 48px;
+                }
+            }
+        }
+    }
+}

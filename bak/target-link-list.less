@@ -1,0 +1,83 @@
+/* ====================== */
+/* = Large Links List   = */
+/* ====================== */
+ul.largeLinkList {
+    margin: 0 !important;
+    list-style: none;
+    li:first-child a {
+        border-top: none;
+    }
+    li a {
+        display: block;
+        padding: 8px;
+        text-decoration: none;
+        position: relative;
+        border-top: 1px solid #DDD;
+
+        .transition(background-color .1s);
+
+        min-height: 32px;
+        position: relative;
+        &:hover {
+            background-color: #689AD8;
+            h3, h4 {
+                color: #FFF;
+            }
+            span {
+                background-color: #4F80BE;
+                color: #FFF;
+            }
+        };
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            margin: 8px;
+            background: url(../images/app_theme.png) -64px -854px no-repeat;
+            &.switchIcon {
+                background: url(../images/app_theme.png) -96px -854px no-repeat;
+            }
+            &.reportIcon {
+                background: url(../images/app_theme.png) -128px -854px no-repeat;
+            }
+            &.calendarIcon {
+                background: url(../images/app_theme.png) -128px -886px no-repeat;
+            }
+            &.userIcon {
+                background: url(../images/app_theme.png) 0 -1280px no-repeat;
+            }
+            &.chartIcon {
+                background: url(../images/app_theme.png) -32px -1280px no-repeat;
+            }
+
+        }
+        h3, h4 {
+            margin-left: 48px;
+
+            .transition(color .1s);
+        }
+        h3 {
+            font: bold 15px/16px Arial, sans-serif;
+            color: #444;
+        }
+        h4 {
+            font: normal 11px/16px Arial, sans-serif;
+            color: #787878;
+        }
+        span {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 12px 8px;
+            font: normal 11px/16px Arial, sans-serif;
+            background-color: #F0F0F0;
+            border-radius: 16px;
+            padding: 4px 8px;
+            color: #333;
+
+            .transition('background-color, color .1s');
+        }
+    }
+}

@@ -1,0 +1,116 @@
+/* Header */
+header#uHeader {
+    margin-bottom: 8px;
+    background: url(../images/app_theme.png) 0 -1090px repeat-x #6a9cda;
+
+    .box-shadow(0 -1px 0 rgba(0,0,0,.15) inset);
+
+    hgroup {
+        height: 90px;
+        position: relative;
+        div.uAPEXNavBar {
+            position: absolute;
+            right: 0;
+            top: 8px;
+            margin: 10px 20px;
+            padding: 0;
+            ul {
+                padding: 0;
+                position: static;
+                height: 20px;
+                li {
+                    display: block;
+                    float: left;
+                    font: normal 11px/20px Arial, sans-serif;
+                    margin: 0 8px;
+                    color: #ddd;
+                    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+                    a {
+/*                      color: #4B66A7;*/
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        ul {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 10px 8px;
+        }
+        ul li {
+            display: block;
+            float: left;
+            font: normal 11px/18px Arial, sans-serif;
+            margin: 0 8px;
+            color: #fff;
+            text-shadow: 0 1px o rgba(255,255,255,.5);
+        }
+        ul li a,
+        ul li span {
+            display: inline-block;
+            font: normal 12px/18px Arial, sans-serif;
+            color: #eee;
+            text-decoration: none;
+            text-shadow: 0 1px 0 rgba(0,0,0,.5);
+            border: 1px solid transparent;
+            &:hover img {
+                &.uAdmin{background-position:-24px -32px;}
+                &.uMobile{background-position:0 -32px;}
+                &.uHelp{background-position:-12px -32px;}
+            }
+        }
+        ul li img {
+            background-image: url(../images/app_theme.png);
+            background-repeat: none;
+            background-color: transparent;
+            width: 12px;
+            height: 12px;
+            vertical-align: text-top;
+            &.uAdmin{background-position:-24px -20px;}
+            &.uMobile{background-position:0 -20px;}
+            &.uHelp{background-position:-12px -20px;}
+            &.uUser{background-position:-36px -20px;}
+        }
+        ul li a.uLogout {
+            padding: 0 6px;
+            border: 1px solid #CCC;
+            border-radius: 10px;
+            &:hover {
+                color: #333;
+                background-color: #EEE;
+            }
+        }
+        ul li a:hover {
+            text-shadow: 0 1px 0 rgba(0,0,0,.5);
+            color: #fff;
+        }
+        ul li:last-child {
+            margin-right: 0;
+        }
+        a#uLogo {
+            margin: 10px 20px;
+            display: inline-block;
+            text-shadow: 0 1px 2px rgba(0,0,0,.25);
+            font: bold 24px/24px Arial, sans-serif;
+            color: #fff;
+            text-decoration: none;
+            img {
+/*              background: url(../images/app_theme.png) 0 0 no-repeat;
+                width: 136px;
+                height: 18px;*/
+                vertical-align: bottom;
+            }
+        }
+    }
+}
+
+/* Vertically Center Logo */
+.ie7 header#uHeader hgroup a#uLogo img {
+    vertical-align: middle;
+}

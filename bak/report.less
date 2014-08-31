@@ -1,0 +1,163 @@
+// Standard Report
+.ui-Report {
+    display: block;
+    overflow: auto;
+}
+
+.ui-Report__wrapper {
+	/*float: left;*/
+}
+
+.ui-Report__table {
+	border: 1px solid @default-report-border-color;
+	border-collapse: collapse;
+	border-spacing: 0 0;
+	empty-cells: show;
+	table-layout: auto;
+	width: 100%;
+}
+
+.ui-Report__header {
+	background-color: @default-report-header-bg;
+	border: none;
+	border-right: 1px solid @default-report-border-color;
+	border-bottom: 1px solid @default-report-border-color;
+	color: @default-report-header-color;
+	padding: @default-padding;
+	vertical-align: bottom;
+
+	& a {
+		color: @primary;
+	}
+}
+
+.ui-Report__data {
+	border: none;
+	border-right: 1px solid @default-report-border-color;
+	border-bottom: 1px solid @default-report-border-color;
+	padding: @default-padding;
+}
+
+.ui-Report__footer {
+	border: 1px solid @default-report-border-color;
+	border-top: 0;
+	display: block;
+	padding: 8px;
+	.clearfix();
+}
+
+.ui-Report__download-link {
+	float: left;
+
+	&:empty {
+		display: none;
+	}
+
+	& a {
+		line-height: 24px;
+	}
+}
+
+.ui-Report__pagination {
+	width: 100%;
+	// float: right;
+
+	&, & table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		table-layout: auto;
+	}
+
+	& td.pagination {
+		padding: 4px;
+		vertical-align: middle;
+	}
+
+	& td:empty {
+		display: none;
+	}
+}
+
+.ui-Report__top-pagination {}
+
+.ui-Report__bottom-pagination {}
+
+.ui-Report__pagination-text {
+	color: #707070;
+}
+
+.ui-Report__pagination-link {
+	display: inline-block;
+}
+
+// Standard - Alternate Row
+.ui-Report__AlternateRow {}
+
+.is-alternate-row {
+    background-color: @default-report-alternate-row-bg;
+    color: @default-report-alternate-row-color;
+}
+
+// Horizontal Border
+.ui-Report__horizontal .ui-Report__header {
+    border-right: none;
+}
+
+.ui-Report__horizontal .ui-Report__data {
+	border: none;
+	border-bottom: 1px solid @default-report-border-color;
+}
+
+// Borderless
+.ui-Report__borderless .ui-Report__table,
+.ui-Report__borderless .ui-Report__data {
+	border: none;
+}
+
+.ui-Report__borderless .ui-Report__header {
+    border-right: none;
+}
+
+.ui-Report__borderless .ui-Report__footer {
+    border: none;
+}
+
+// One Column Unordered List
+.ui-Report__one-col-list {}
+
+.ui-Report__one-col-list-item {
+  padding: @default-padding;
+  border-bottom: 1px solid @default-report-border-color;
+}
+.ui-Report__one-col-list-item--1 {
+  background-color: @primary-3;
+  color: #fff;
+}
+
+//  Two Columns Portlet
+.ui-Report__two-col-portlet {
+    & li {
+        border-bottom: 1px dotted darken(@default-report-border-color, 10%);
+        line-height: 6px;
+        padding: @default-padding;
+        .clearfix();
+    }
+
+    & .ui-Report__table {
+        border: none;
+    }
+
+    & .ui-Report__footer {
+        border: none;
+    }
+}
+
+.ui-Report__two-col-portlet-header {
+    float: left;
+}
+
+.ui-Report__two-col-portlet-value {
+    float: right;
+}
+
+.uNoPadding .ui-Report__table { border: none; }

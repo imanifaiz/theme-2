@@ -1,0 +1,127 @@
+// div#uBreadcrumbs {
+//     font: normal 11px/16px Arial, sans-serif;
+//     color: @default-breadcrumb-link-color; //#222;
+//     // margin: 0 24px;
+//     position: relative;
+//     height: 32px; //40px;
+//     //background: @default-breadcrumb-bg;
+//     #gradient > .vertical(@start-color: lighten(@default-breadcrumb-bg,5%); @end-color: @default-breadcrumb-bg);
+//     margin-bottom: 8px;
+//     ul {
+//         list-style: none;
+//         position: absolute;
+//         top: 0;
+//         left: 24px; //0;
+//         z-index: 100;
+//         li {
+//             padding: 8px 0;
+//             display: inline-block;
+//             font-size: 12px;
+//             a {
+//                 color: @default-breadcrumb-link-color; //#4B66A7;
+//                 text-decoration: none;
+
+//                 .transition('color, .2s');
+
+//                 &:hover {
+//                     color: @default-breadcrumb-link-hover-color; //#000;
+//                 }
+//             }
+//             &.active span {
+//                 color: @default-breadcrumb-text-color; //#555;
+//             }
+//             &.uSeparator {
+//                 img {
+//                     background: url(../images/app_theme.png) -48px -20px no-repeat;
+//                     width: 12px;
+//                     height: 12px;
+//                     vertical-align: text-top;
+//                 }
+//             }
+//         }
+//     }
+//     div.uBreadcrumbsBG {
+//         margin: 0 126px;
+//         background: url(../images/app_theme.png) 0 -172px repeat-x;
+//         height: 32px;
+//         div.uLeft,
+//         div.uRight {
+//             width: 126px;
+//             height: 32px;
+//             position: absolute;
+//         }
+//         div.uLeft {
+//             background: url(../images/app_theme.png) 0 -140px repeat-x;
+//             left: 0;
+//         }
+//         div.uRight {
+//             background: url(../images/app_theme.png) 0 -108px repeat-x;
+//             right: 0;
+//         }
+//     }
+// }
+// /* IE 7 Breadcrumbs Fix */
+// .ie7 div#uBreadcrumbs {
+//     ul li {
+//         zoom: 1;
+//         display: inline;
+//         padding: 8px 4px;
+//     }
+//     ul li.uSeparator {
+//         padding: 8px 0;
+//     }
+//     ul li:first-child {
+//         padding-left: 0;
+//     }
+// }
+
+// 
+.ui-Breadcrumb {
+  list-style: none;
+  padding: 0;
+  margin: 12px 12px 12px 16px;
+}
+
+.ui-Breadcrumb:empty {
+  display: none;
+}
+
+.ui-Breadcrumb-item {
+  display: inline-block;
+  height: 16px;
+  vertical-align: top;
+}
+
+.ui-Breadcrumb-item:nth-child(2) {
+    display:none
+}
+
+.ui-Breadcrumb-item:after {
+  content: '→';
+  color: silver;
+  margin-left: 8px;
+  margin-right: 6px;
+}
+
+.ui-Breadcrumb-item:last-child:after {
+  content: '';
+}
+
+.ui-Breadcrumb-item .a-Icon {
+  color: #707070;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.ui-Breadcrumb-item .a-Icon:hover {
+  color: #2580d4;
+}
+
+.ui-Breadcrumb-label {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.ui-Breadcrumb--dividerSlash .ui-Breadcrumb-item:after {
+  content: '/';
+}
