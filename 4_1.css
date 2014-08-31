@@ -1205,7 +1205,8 @@ a.bg-danger:hover {
 }
 ul,
 ol {
-  margin-top: 0;
+  margin: 0;
+  padding: 0 0 0 20px;
   margin-bottom: 8.5px;
 }
 ul ul,
@@ -3992,6 +3993,43 @@ a.list-group-item.active > .badge,
   padding-left: 0;
   list-style: none;
 }
+.list-horz-image,
+.list-vert-image {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list-horz-image > li,
+.list-vert-image > li {
+  float: left;
+  width: 120px;
+}
+.list-horz-image > li.active,
+.list-vert-image > li.active {
+  -webkit-box-shadow: 0 0 1px 1px #7eb0db;
+  box-shadow: 0 0 1px 1px #7eb0db;
+}
+.list-horz-image > li + li,
+.list-vert-image > li + li {
+  margin-left: 10px;
+}
+.list-horz-image > li > .media,
+.list-vert-image > li > .media {
+  margin: 0 0 6px;
+}
+.list-horz-image > li > .link,
+.list-vert-image > li > .link {
+  text-align: center;
+  padding: 6px 0;
+  word-break: break-word;
+}
+.list-vert-image > li {
+  float: none;
+}
+.list-vert-image > li + li {
+  margin-left: 0;
+  margin-top: 10px;
+}
 .list-group {
   margin-bottom: 20px;
   padding-left: 0;
@@ -4491,6 +4529,22 @@ a.list-group-item-danger.active:focus {
 }
 .panel-heading-inside > .panel-heading {
   border-bottom: none;
+}
+.panel-wizard {
+  text-align: center;
+}
+.panel-wizard > .panel-heading > .panel-title {
+  font-size: 24px;
+  line-height: 34px;
+}
+.panel-ir {
+  background: none;
+  margin-bottom: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.panel-ir > .panel-body {
+  padding: 0;
 }
 .panel-report {
   border: none;
@@ -6551,6 +6605,7 @@ button.close {
 footer#uFooter {
   clear: both;
   margin-top: 17px;
+  margin-bottom: 17px;
 }
 footer#uFooter div.uFooterContent {
   float: left;
