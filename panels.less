@@ -262,10 +262,17 @@
 .panel-report {
 	border: none;
 	margin-bottom: 0;
+  .box-shadow(none);
+
+  > .panel-heading,
+  > .panel-footer {
+    background-color: #fff;
+  }
+
 
 	> .panel-heading {
 		border: none; //1px solid @panel-default-border;
-		padding: 0 @table-cell-padding @table-cell-padding;
+		padding: 0;
 
 		&:extend(.clearfix all);
 	}
@@ -280,7 +287,7 @@
 
 	> .panel-footer {
 		border: none; //1px solid @panel-default-border;
-		padding: @table-cell-padding @table-cell-padding 0;
+		padding: 0;
 
 		&:extend(.clearfix all);
 	}
