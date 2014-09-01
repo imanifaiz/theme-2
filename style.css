@@ -1,69 +1,3 @@
-// Horizontal list with image
-.list-horz-image {
-	margin: 0;
-	padding: 0;
-	list-style:  none;
-
-	> li {
-		float: left;
-		max-width: 128px;
-		padding: @padding-base-vertical;
-
-		&.active {
-			.box-shadow(0 0 1px 1px lighten(@brand-primary,15%));
-		}
-
-		& + li {
-		  margin-left: @padding-base-horizontal;
-		}
-
-		> .media {
-			margin: 0 0 @padding-base-vertical;
-
-			> img {
-				display: block;
-				margin: auto;
-			}
-		}
-
-		> .link {
-			text-align: center;
-			padding: @padding-base-vertical 0;
-			word-break: break-word;
-		}
-	}
-}
-
-// Vertical list with image
-.list-vert-image {
-	&:extend(.list-horz-image all);
-
-	> li {
-		float: none;
-
-		& + li {
-			margin-left: 0;
-			margin-top: @padding-base-horizontal;
-		}
-	}
-}
-
-// Vertical List with Icon
-.list-vert-icon {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-
-	> li {
-		padding: @padding-base-vertical 0;
-
-		> img {
-			padding-right: @padding-base-horizontal;
-		}
-	}
-}
-
-/* Horizontal Wizard Progress List */
 div.uHorizontalProgressList {
   width: 100%;
   position: relative;
@@ -85,15 +19,15 @@ div.uHorizontalProgressList ul li {
   display: block;
   position: relative;
   right: 50%;
-  background: url(../images/progress-sprite.png) 50% -115px no-repeat;
   counter-increment: wizard-counter;
+  background: url(progress-sprite.png) 50%-115px no-repeat;
 }
 div.uHorizontalProgressList ul li span {
   display: block;
   float: left;
-  padding: 20px 5px 0 5px;
+  padding: 19px 5px 0 5px;
   color: #555;
-  background-image: url(../images/progress-sprite.png);
+  background-image: url(progress-sprite.png);
   background-repeat: no-repeat;
   text-align: center;
   white-space: nowrap;
@@ -106,25 +40,25 @@ div.uHorizontalProgressList ul li.first-current span,
 div.uHorizontalProgressList ul li.last-current span {
   color: #333;
   font-weight: bold;
-  background-position: 0 -29px;
+  background-position: 5px -29px;
 }
 div.uHorizontalProgressList ul li.non-current span,
 div.uHorizontalProgressList ul li.first-non-current span,
 div.uHorizontalProgressList ul li.last-non-current span {
-  background-position: -97px -29px;
+  background-position: -92px -29px;
 }
 div.uHorizontalProgressList ul li.last-non-current,
 div.uHorizontalProgressList ul li.last-current {
-   background: url(../images/progress-sprite.png) 50% -205px no-repeat;
+   background: url(progress-sprite.png) 50% -205px no-repeat;
 }
 div.uHorizontalProgressList ul li.first-non-current,
 div.uHorizontalProgressList ul li.first-current {
-   background: url(../images/progress-sprite.png) 50% -295px no-repeat;
+   background: url(progress-sprite.png) 50% -295px no-repeat;
 }
 div.uHorizontalProgressList ul li span:before {
   content: counter(wizard-counter);
   font-size: 16px;
-  color: @wizard-list-noncurrent-color;
+  color: #d6d6d6;
   display: block;
   margin-bottom: 30px;
 }
@@ -134,7 +68,7 @@ div.uHorizontalProgressList ul li.last-current span:before {
   color: transparent;
 }
 
-/* Vertical Wizard Progress List */
+/**/
 div.uVerticalProgressList {
   width: 100%;
   position: relative;
@@ -150,66 +84,57 @@ div.uVerticalProgressList ul {
 div.uVerticalProgressList ul li {
   display: block;
   counter-increment: wizard-counter;
-  background: url(../images/progress-sprite.png) -22px 49% no-repeat;
+  background: url(progress-sprite.png) -22px 49% no-repeat;
   min-width: 80px;
   max-width: 100px;
   min-height: 100px;
-  position: relative;
 }
 div.uVerticalProgressList ul li span {
   display: inline-block;
-  padding: 15px 0 15px 70px;
+  padding: 13px 40px;
   color: #555;
-  background-image: url(../images/progress-sprite.png);
+  background-image: url(progress-sprite.png);
   background-repeat: no-repeat;
   text-align: center;
   white-space: nowrap;
+  overflow: hidden;
+  min-width: 100px;
+  max-width: 190px;
   margin-top: 25px;
 }
 div.uVerticalProgressList ul li.first-current span,
 div.uVerticalProgressList ul li.first-non-current span {
-  margin-top: 21px;
-}
+  margin-top: 21px;}
 div.uVerticalProgressList ul li.last-current span,
 div.uVerticalProgressList ul li.last-non-current span {
-  margin-top: 31px;
-}
+  margin-top: 26px;}
 div.uVerticalProgressList ul li.current span,
 div.uVerticalProgressList ul li.first-current span,
 div.uVerticalProgressList ul li.last-current span {
   color: #333;
   font-weight: bold;
-  background-position: -22px -36px;
+  background-position: -23px -35px;
   content: counter(wizard-counter);
-}
-div.uVerticalProgressList ul li.current span {
-background-position: -23px -35px;
 }
 div.uVerticalProgressList ul li.non-current span,
 div.uVerticalProgressList ul li.first-non-current span,
 div.uVerticalProgressList ul li.last-non-current span {
   background-position: -121px -36px;
 }
-div.uVerticalProgressList ul li.last-non-current span {
-background-position: -121px -40px;
-}
 div.uVerticalProgressList ul li.last-non-current,
 div.uVerticalProgressList ul li.last-current {
-  background: url(../images/progress-sprite.png) -122px -678px no-repeat;
-}
-div.uVerticalProgressList ul li.last-current span {
-background-position: -23px -40px;
+   background: url(progress-sprite.png) -122px -678px no-repeat;
 }
 div.uVerticalProgressList ul li.first-non-current,
 div.uVerticalProgressList ul li.first-current {
-  background: url(../images/progress-sprite.png) -23px -610px no-repeat;
+   background: url(progress-sprite.png) -23px -610px no-repeat;
 }
-div.uVerticalProgressList ul li span:before {
-content: counter(wizard-counter);
-font-size: 16px;
-color: @wizard-list-noncurrent-color;
-position: absolute;
-left: 20%;
+div.uVerticalProgressList ul li:before {
+  /* content: counter(wizard-counter); */
+  font-size: 16px;
+  color: #d6d6d6;
+  /* padding-left: 30px; */
+  display: inline-block;
 }
 div.uVerticalProgressList ul li.first-current span:before,
 div.uVerticalProgressList ul li.current span:before,
