@@ -131,7 +131,7 @@ div.uHorizontalProgressList ul li span:before {
 div.uHorizontalProgressList ul li.first-current span:before,
 div.uHorizontalProgressList ul li.current span:before,
 div.uHorizontalProgressList ul li.last-current span:before {
-  color: transparent;
+  color: #FFF;
 }
 
 /* Vertical Wizard Progress List */
@@ -214,5 +214,44 @@ left: 20%;
 div.uVerticalProgressList ul li.first-current span:before,
 div.uVerticalProgressList ul li.current span:before,
 div.uVerticalProgressList ul li.last-current span:before {
-  color: transparent;
+  color: #FFF;
+}
+
+// Pull Down Menu list-style-type:
+.dhtmlMenuLG2 {};
+
+.dhtmlMenuItem1 {
+	> span {
+		margin-left: -1px;
+
+		&:extend(.btn all);
+		&:extend(.btn-default all);
+	}
+
+	&.active {
+		> span {
+			&:extend(.btn-primary all);
+		}
+	}
+}
+
+// DHTML Tree list.
+ul.dhtmlTree {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.dhtmlTree li {
+    padding: 2px 0;
+    vertical-align: middle;
+
+    > ul.dhtmlTree {
+    	padding-left: 12px;
+    }
+}
+
+ul.dhtmlTree li img {
+    margin: 0 4px;
+    vertical-align: middle;
 }
